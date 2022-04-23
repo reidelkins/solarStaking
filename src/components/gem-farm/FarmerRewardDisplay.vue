@@ -1,17 +1,12 @@
 <template>
 
-      <div v-if="parseRewardType(farmReward) === 'variable'">
-      </div>
-      <div v-else>
-        
-        
-        
-        <div class="mb-2 titleWords text-2xl">MILEZ Rates</div>
-        <FixedScheduleDisplay
-          :key="farmReward"
-          class="ml-1"
-          :schedule="reward.fixedRate.promisedSchedule"
-        />
+      <div>      
+        <div class="mb-2 titleWords text-2xl">Staking Rewards</div>
+        <div class="mb-2 words">Each month, 37.5% of all exchange fees from Solar Dex will be paid out to Sentry Holders</div>
+        <div class="mb-2 words">You qualify for your payout if you are staking on the 28th of each month and have been staking for over 15 days</div>
+        <div class="mb-2 words">1/1 Sentries will earn 10x more than a common Sentry</div>
+        <div class="mb-2 words">Epic Sentries, 11-500, will earn 6x more than a common Sentry</div>
+        <div class="mb-2 words">Rare Sentries, 501-2000, will earn 3x more than a common Sentry</div>
       </div>
 </template>
 

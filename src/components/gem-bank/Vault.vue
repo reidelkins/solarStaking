@@ -1,16 +1,7 @@
 <template>
   <!--control buttons-->
   <div class="mb-10 flex justify-center">
-    <button
-      v-if="
-        (toWalletNFTs && toWalletNFTs.length) ||
-        (toVaultNFTs && toVaultNFTs.length)
-      "
-      class="refreshButton connectText is-primary mb-5 buttonBorder"
-      @click="moveNFTsOnChain"
-    >
-      Finalize board/disembark! 
-    </button>
+    
     
     <slot />
   </div>
@@ -23,7 +14,7 @@
     > 
       <NFTGrid
         title="vault"
-        class="flex-1 box"
+        class="flex-1 vaultBox"
         :nfts="desiredWalletNFTs"
         @selected="handleWalletSelected"
       />
@@ -32,7 +23,7 @@
       >    
         <div class="flex justify-center items-center">
           <div class="spinner-border animate-spin inline-block w-16 h-16 border-4 rounded-full" role="status">
-            <img src="../../assets/banana-loading.png">
+            <img src="../../assets/inceptionLogoSmall.png">
           </div>
         </div>
       </div>
@@ -45,20 +36,20 @@
           class="refreshButton navText nav-button text-2xl disabled:opacity-50"
           :left="true"
           @click="moveNFTsFE(true)"
-        >Disembark</Button>
+        >Move To Wallet</Button>
         <Button
           :disabled="vaultLocked"
           class="refreshButton navText nav-button text-2xl disabled:opacity-50"
-          @click="moveNFTsFE(false)"
+          @click="moveNFTsFE(false);"
         >
-          Board
+          Move To Staking
         </Button>
       </div>
       <div
         v-if="vaultLocked"
         class= "navText text-2xl"
       >
-        Plane is currently in the air or refueling
+        Currently Staking or Cooling Down
       </div>
     </div>
     <!--right-->
@@ -66,7 +57,7 @@
       <NFTGrid
         v-if="bank && vault"
         title="wallet"
-        class="flex-1 box"
+        class="flex-1 vaultBox"
         :nfts="desiredVaultNFTs"
         @selected="handleVaultSelected"
       />
@@ -75,7 +66,7 @@
       >    
         <div class="flex justify-center items-center">
           <div class="spinner-border animate-spin inline-block w-16 h-16 border-4 rounded-full" role="status">
-            <img src="../../assets/banana-loading.png">
+            <img src="../../assets/inceptionLogoSmall.png">
           </div>
         </div>
       </div>
@@ -160,7 +151,6 @@ export default defineComponent({
       selectedVaultNFTs.value = [];
       desiredVaultNFTs.value = [];
 
-
       const foundGDRs = await gb.fetchAllGdrPDAs(vault.value);
       if (foundGDRs && foundGDRs.length) {
         gdrs.value = foundGDRs;
@@ -225,7 +215,7 @@ export default defineComponent({
       }
     };
 
-    const moveNFTsFE = (moveLeft: boolean) => {
+    const moveNFTsFE = async (moveLeft: boolean) => {
       if (moveLeft) {
         //push selected vault nfts into desired wallet
         desiredWalletNFTs.value.push(...selectedVaultNFTs.value);
@@ -241,6 +231,7 @@ export default defineComponent({
         //empty selected walelt
         selectedWalletNFTs.value = [];
       }
+      setTimeout(() => {moveNFTsOnChain()}, 2000);
     };
 
     //todo jam into single tx

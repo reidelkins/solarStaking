@@ -11,7 +11,7 @@ body {
 }
 
 body {
-  background: url('./assets/mile_high_airline.jpg') no-repeat center center
+  background: url('./assets/solarStaking.png') no-repeat center center
     fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -20,13 +20,11 @@ body {
 }
 
 .box {
-  background-color: #79b4ff;
-  opacity: 0.9;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
-.firstBox {
-  background-color: #79b4ff;
-  opacity: 0.9;
+.vaultBox {
+  background-color: rgba(255, 255, 255, 0.9)
 }
 
 .words {
@@ -49,7 +47,7 @@ body {
 
 .header {
   font-family: 'Bebas Neue';
-  color: #79b4ff;
+  color: #ffffff;
   font-weight: bolder;
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
@@ -58,7 +56,7 @@ body {
   border-radius: 18px !important;
   padding: 6px 16px;
   max-width: 500px;
-  background-color: #79b4ff;
+  background-color: #ffffff;
   margin: 0 auto;
   cursor: pointer;
 }
@@ -75,7 +73,7 @@ body {
   font-family: 'Bebas Neue';
   font-weight: bolder;
   letter-spacing: 2px;
-  color: #79b4ff;
+  color: #000000;
 }
 
 .connectText {

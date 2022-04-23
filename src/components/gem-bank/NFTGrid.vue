@@ -2,10 +2,10 @@
   <div class="nes-container with-title rounded-lg">
 
     <div v-if="title === 'vault'">
-      <p class="cardTitle">Apes Still in the Terminal</p>
+      <p class="cardTitle">Personal Wallet</p>
     </div>
     <div v-else>
-      <p class="cardTitle">Boarded Apes</p>
+      <p class="cardTitle">Staking Wallet</p>
     </div>
     <slot />
     <div class="nftGrid">

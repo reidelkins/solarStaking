@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
-import Plane from '@/views/Plane.vue';
+import SpaceShip from '@/views/SpaceShip.vue';
 import Manager from '@/views/Manager.vue';
 import Home from '@/views/Home.vue';
 
@@ -10,9 +10,9 @@ const routes: Array<RouteRecordRaw> = [
     component: Home,
   },
   {
-    path: '/plane',
-    name: 'Plane',
-    component: Plane,
+    path: '/Spaceship',
+    name: 'SpaceShip',
+    component: SpaceShip,
   },
 ];
 

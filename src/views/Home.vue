@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex flex-row justify-center align-middle">
+    <!-- <div class="flex flex-row justify-center align-middle">
       <button
         class="refreshButton navText mb-10 nav-button text-2xl"
         v-on:click="setRules"
@@ -13,9 +13,8 @@
       >
         Boarding Apes
       </button>
-    </div>
-    <br>
-    <br>
+    </div> -->
+    
     <div v-if="page === 'home'" class="mb-10 box buttonBorder nav-button rounded-xl">
       <h1 class="mt-5 mainWords text-xl md:text-2xl">Welcome to Mile High Airlines</h1>    
       <p class="mt-10 titleWords text-lg md:text-xl">How Do My Apes Board?</p>
@@ -61,7 +60,7 @@
 
 <script lang="ts">
 import { defineComponent, watch } from 'vue';
-import Plane from './Plane.vue';
+import Plane from './SpaceShip.vue';
 export default defineComponent({
   components: { Plane },
   

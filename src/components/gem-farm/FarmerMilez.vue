@@ -1,15 +1,11 @@
 <template>
-    <div class="mb-2 titleWords text-2xl">Your MILEZ </div>
-    <div class="mb-2 words">Milez accrued: {{ reward.accruedReward/1000000 }}</div>
-    <div class="mb-2 words">Milez paid: {{ reward.paidOutReward/1000000 }}</div>
-    <div class="mb-2 words">
-        Last updated: {{ parseDate(reward.fixedRate.lastUpdatedTs) }}
-    </div>
-    <div class="mb-2 words" v-if="gems>19">Accrual Rate: {{ rarities*1.25 }} MILEZ per Day</div>
-    <div class="mb-2 words" v-else-if="gems>9">Accrual Rate: {{ rarities*1.2 }} MILEZ per Day</div>
-    <div class="mb-2 words" v-else-if="gems>4">Accrual Rate: {{ rarities*1.1 }} MILEZ per Day</div>
-    <div class="mb-2 words" v-else-if="gems>2">Accrual Rate: {{ rarities*1.05 }} MILEZ per Day</div>
-    <div class="mb-2 words" v-else>Accrual Rate: {{ rarities }} MILEZ per Day</div>
+    <div class="mb-2 titleWords text-2xl">Staking Guidelines </div>
+    <div class="mb-2 words">1. The minimum staking period is 15 days</div>
+    <div class="mb-2 words">2. Revenue sharing will be paid on the 28th of every month</div>
+    <div class="mb-2 words">3. To move your sentries from your wallet to the staking wallet, click on them, click "Move", then click "Confirm Moves"</div>
+    <div class="mb-2 words">4. You will need to confirm a transaction for each NFT you are moving</div>
+    <div class="mb-2 words">5. Then to begin staking, click "Stake"</div>
+    
 </template>
 
 <script lang="ts">

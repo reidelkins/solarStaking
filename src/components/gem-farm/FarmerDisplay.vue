@@ -1,30 +1,33 @@
 <template>
   <div class="container mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-6 p-5">
-      <div class="shadow-lg bg-blue-200 p-4 rounded-lg">
-        <div class="mb-5 mainWords text-2xl">Mile High Airlines</div>
-        <div class="mb-5 mainWords text-lg">Planes in the Air: {{farmAcc.stakedFarmerCount }}</div>
-        <div class="mb-5 mainWords text-lg">Flying Apes: {{farmAcc.gemsStaked}}</div>
+      <div class="shadow-lg bg-white p-4 rounded-lg">
+        <div class="mb-5 mainWords text-2xl">Solar Sentries</div>
+        <div class="mb-5 mainWords text-lg">Sentry Owners Staking: {{farmAcc.stakedFarmerCount }}</div>
+        <div class="mb-5 mainWords text-lg">Sentries Staked: {{farmAcc.gemsStaked}}</div>
       </div>
 
-      <div class="shadow-lg bg-blue-200 p-4 rounded-lg">
+      <div class="shadow-lg bg-white p-4 rounded-lg">
         <div class="mb-2">
-          <div class="titleWords text-2xl mb-2">Current Flight </div>
-          <p class="words" v-if="parseFarmerState(farmerAcc) === 'staked'">The plane is currently in the air</p>
+          <div class="titleWords text-2xl mb-2">Your Staking Session </div>
+          <p class="words" v-if="parseFarmerState(farmerAcc) === 'staked'">You are staked</p>
           <p class="words" v-else>
-            The plane is currently on the ground
+            You are not staked
           </p>
         </div>
         
-        <div class="mb-2 words">Apes boarded:  {{ farmerAcc.gemsStaked }}</div>
+        <div class="mb-2 words">Your Sentries Staked:  {{ farmerAcc.gemsStaked }}</div>
         <div class="mb-2 words">
-          Flight is first able to land at {{ parseDate(farmerAcc.minStakingEndsTs) }}
+          You may first stop staking at: {{ parseDate(farmerAcc.minStakingEndsTs) }}
         </div>
         <div class="mb-5 words">
-          Refueling ends at {{ parseDate(farmerAcc.cooldownEndsTs) }}
+          Your cooldown period ends at: {{ parseDate(farmerAcc.cooldownEndsTs) }}
+        </div>  
+        <div class="mb-5 words">
+          Your next payday should be: {{ parseDate(farmerAcc.cooldownEndsTs) }}
         </div>   
       </div>
-      <div class="shadow-lg bg-blue-200 p-4 rounded-lg">
+      <div class="shadow-lg bg-white p-4 rounded-lg">
         <FarmerMilez
           :key="farmerAcc.rewardA"
           :farmReward="farmAcc.rewardA"
@@ -33,7 +36,7 @@
           :gems="farmerAcc.gemsStaked"
         />
       </div>
-      <div class="shadow-lg bg-blue-200 p-4 rounded-lg">
+      <div class="shadow-lg bg-white p-4 rounded-lg">
         <FarmerRewardDisplay
           :key="farmerAcc.rewardA"
           :farmReward="farmAcc.rewardA"
@@ -44,7 +47,7 @@
     <div class="flex content-center">
       <div class="ml-5">
         <button class="refreshButton connectText is-primary mb-5 buttonBorder" @click="refreshFarmer">
-              Check Flight Progress
+              Refresh Info
         </button>
       </div>
     </div>

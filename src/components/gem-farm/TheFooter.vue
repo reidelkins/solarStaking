@@ -2,7 +2,7 @@
   
     <div className="footer">
       <div className="flex">
-        <p className="words">Copyright © Mile High Ape Club - 2022</p>
+        <p className="words">Copyright © Inception AIO - 2022</p>
 
       </div>
       <div style="width:200px">
@@ -16,6 +16,9 @@
       </a>
       <a href="https://www.instagram.com/milehighapeclub/" target="_blank">
         <img src="./../../assets/instagram.png" />
+      </a>
+      <a href="https://twitter.com/InceptionAIO" target="_blank">
+        <img  src="./../../assets/logo_white.svg" />
       </a>
     </div>
     

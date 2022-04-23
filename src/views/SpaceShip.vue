@@ -26,31 +26,28 @@
           class="refreshButton connectText is-primary mb-5 buttonBorder"
           @click="addGems"
         >
-          Board/Deboard Selected Apes
+          Finalize Move
         </button>
         <button
           v-if="farmerState === 'unstaked'"
           class="refreshButton connectText is-primary mb-5 buttonBorder"
           @click="beginStaking"
         >
-          Takeoff
+          Stake
         </button>
         <button
           v-if="farmerState === 'staked'"
           class="refreshButton connectText is-primary mb-5 buttonBorder"
           @click="endStaking"
         >
-          Land
+          Unstake
         </button>
         <button
           v-if="farmerState === 'pendingCooldown'"
           class="refreshButton connectText is-primary mb-5 buttonBorder"
           @click="endStaking"
         >
-          End Refueling
-        </button>
-        <button class="refreshButton connectText is-primary mb-5 buttonBorder" @click="claim">
-          Claim {{ availableA/1000000 }} Milez
+          End Cooldown
         </button>
       </Vault>
     </div>
@@ -58,7 +55,7 @@
       <br>
       <div class="w-full text-center words">
         <button class="connectButton is-primary buttonBorder" style="border-color:black" @click="initFarmer">
-          NO ACCOUNT FOR THIS ADDRESS<br> CLICK HERE TO MAKE ONE
+          NO STAKING ACCOUNT FOR THIS ADDRESS<br> CLICK HERE TO MAKE ONE
         </button>
       </div>
     </div>
@@ -94,7 +91,7 @@ export default defineComponent({
     });
 
     // --------------------------------------- farmer details
-    const farm = ref<string>("6JMtpk6dQ2bjUf1srU8Gr2Lmd2kvGfcBQTVqZwuKArsR");
+    const farm = ref<string>("HHXbgiaCbHy9ZWivckeDGkaLEywQyjUe7PqksVsWMZG9");
     const farmAcc = ref<any>();
 
     const farmerIdentity = ref<string>();
