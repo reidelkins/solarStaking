@@ -11,7 +11,7 @@ body {
 }
 
 body {
-  background: url('./assets/solarStaking.png') no-repeat center center
+  background: url('./assets/1.png') no-repeat center center
     fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -74,6 +74,12 @@ body {
   font-weight: bolder;
   letter-spacing: 2px;
   color: #000000;
+}
+.moveText {
+  font-family: 'Bebas Neue';
+  font-weight: bolder;
+  letter-spacing: 2px;
+  color: #ffffff;
 }
 
 .connectText {

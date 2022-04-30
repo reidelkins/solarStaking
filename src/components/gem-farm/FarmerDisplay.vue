@@ -10,21 +10,18 @@
       <div class="shadow-lg bg-white p-4 rounded-lg">
         <div class="mb-2">
           <div class="titleWords text-2xl mb-2">Your Staking Session </div>
-          <p class="words" v-if="parseFarmerState(farmerAcc) === 'staked'">You are staked</p>
+          <!-- <p class="words" v-if="parseFarmerState(farmerAcc) === 'staked'">You are staked</p>
           <p class="words" v-else>
             You are not staked
-          </p>
+          </p> -->
         </div>
         
         <div class="mb-2 words">Your Sentries Staked:  {{ farmerAcc.gemsStaked }}</div>
         <div class="mb-2 words">
           You may first stop staking at: {{ parseDate(farmerAcc.minStakingEndsTs) }}
-        </div>
+        </div> 
         <div class="mb-5 words">
-          Your cooldown period ends at: {{ parseDate(farmerAcc.cooldownEndsTs) }}
-        </div>  
-        <div class="mb-5 words">
-          Your next payday should be: {{ parseDate(farmerAcc.cooldownEndsTs) }}
+          The next payday is: May 30.
         </div>   
       </div>
       <div class="shadow-lg bg-white p-4 rounded-lg">

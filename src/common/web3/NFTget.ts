@@ -62,7 +62,7 @@ export async function getNFTMetadataForMany(
   conn: Connection
 ): Promise<INFT[]> {
   const promises: Promise<INFT | undefined | null>[] = [];
-  tokens.forEach((t) => promises.push(getNFTMetadata(t.mint, conn, "PRAC", t.pubkey)));
+  tokens.forEach((t) => promises.push(getNFTMetadata(t.mint, conn, "SDS", t.pubkey)));
   const nfts = (await Promise.all(promises)).filter((n) => !!n);
   // console.log(`found ${nfts.length} metadatas`);
 

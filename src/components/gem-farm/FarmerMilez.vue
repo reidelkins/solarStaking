@@ -1,8 +1,8 @@
 <template>
     <div class="mb-2 titleWords text-2xl">Staking Guidelines </div>
-    <div class="mb-2 words">1. The minimum staking period is 15 days</div>
+    <div class="mb-2 words">1. The minimum staking period is 15 days. This policy will start on May 7th, 2022.</div>
     <div class="mb-2 words">2. Revenue sharing will be paid on the 28th of every month</div>
-    <div class="mb-2 words">3. To move your sentries from your wallet to the staking wallet, click on them, click "Move", then click "Confirm Moves"</div>
+    <div class="mb-2 words">3. To move your sentries from your wallet to the staking wallet, select each NFT you want to move, then click "Move to Staking"</div>
     <div class="mb-2 words">4. You will need to confirm a transaction for each NFT you are moving</div>
     <div class="mb-2 words">5. Then to begin staking, click "Stake"</div>
     

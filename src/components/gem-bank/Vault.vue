@@ -47,7 +47,7 @@
       </div>
       <div
         v-if="vaultLocked"
-        class= "navText text-2xl"
+        class= "moveText text-2xl"
       >
         Currently Staking or Cooling Down
       </div>
